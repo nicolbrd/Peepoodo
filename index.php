@@ -51,13 +51,13 @@ li{
 
 	$file = fopen( $filename, "r" );
 	while (!feof($file)) {
-	    Lgn=fgets($file);
+	    $Lgn=fgets($file);
 	    if(isset($_POST['filtername']) and $_POST['filtername']!=''){
-	    	Lgn=strstr(Lgn, $_POST['filtername'],true).strstr(Lgn, $_POST['filtername']);
-	    	if(Lgn)echo "<ul><li>Lgn</ul></li><br>";
+	    	$Lgn=strstr($Lgn, $_POST['filtername'],true).strstr($Lgn, $_POST['filtername']);
+	    	if($Lgn)echo "<ul><li>$Lgn</ul></li><br>";
 	    }
 	    else{
-	    	if(Lgn)echo "<ul><li>Lgn</ul></li><br>";
+	    	if($Lgn)echo "<ul><li>$Lgn</ul></li><br>";
 	    }
 	    
 	}
